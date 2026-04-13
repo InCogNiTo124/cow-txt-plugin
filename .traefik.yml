@@ -1,12 +1,6 @@
-displayName: Demo Plugin
+displayName: "Cow Txt Interceptor"
 type: middleware
-iconPath: .assets/icon.png
-
-import: github.com/traefik/plugindemo
-
-summary: '[Demo] Add Request Header'
-
+import: github.com/msmetko/cow-txt-plugin
+summary: "Intercepts requests for /cow.txt and serves the canonical ASCII cow."
 testData:
-  Headers:
-    X-Demo: test
-    X-URL: '{{URL}}'
+  {}

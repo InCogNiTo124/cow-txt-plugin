@@ -1,3 +1,3 @@
-module github.com/traefik/plugindemo
+module github.com/msmetko/cow-txt-plugin
 
-go 1.19
+go 1.26.2
