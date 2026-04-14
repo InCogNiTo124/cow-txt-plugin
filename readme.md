@@ -51,25 +51,8 @@ http:
           {}
 ```
 
-## Local Testing & Development
-
-Traefik allows developers to bypass the plugin catalog and run local unreleased plugins during development. The local source code should reside in a `plugins-local/src/github.com/incognito124/cow-txt-plugin` directory explicitly mounted to your Traefik container/process.
-
-### Useful Commands
-
-Within the plugin development folder itself, standard tooling is enabled:
-
-```bash
-# Lints your Go source code using golangci-lint (requires configuration in .golangci.yml)
-make lint
-
-# Runs standard module tests
-make test
-
-# Tests the plugin behavior directly in the Yaegi interpreted environment (as Traefik will run it!)
-make yaegi_test
-```
-
 ## Credits 
+
+Compliant with the cow.txt RFC specification defined at https://moooo.farm/.
 
 Initial configuration setup, tooling modernization, and namespace migrations were authored with the assistance of **Gemini 3.1 Pro**.
