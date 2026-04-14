@@ -1,4 +1,4 @@
-# Cow Txt Interceptor
+# Cow Txt Interceptor Plugin
 
 [![Build Status](https://github.com/incognito124/cow-txt-plugin/workflows/Main/badge.svg?branch=master)](https://github.com/incognito124/cow-txt-plugin/actions)
 
