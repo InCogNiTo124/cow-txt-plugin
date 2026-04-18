@@ -1,6 +1,6 @@
 # Cow Txt Interceptor Plugin
 
-[![Build Status](https://github.com/incognito124/cow-txt-plugin/workflows/Main/badge.svg?branch=master)](https://github.com/incognito124/cow-txt-plugin/actions)
+[![Build Status](https://github.com/InCogNiTo124/cow-txt-plugin/workflows/Main/badge.svg?branch=master)](https://github.com/InCogNiTo124/cow-txt-plugin/actions)
 
 A [Traefik](https://traefik.io) middleware plugin written in [Go](https://golang.org) that intercepts requests hitting the exact path `/cow.txt` and immediately serves a predefined ASCII cow, returning a standard `200 OK` and adjusting the `Content-Type` header to `text/plain; charset=utf-8`. 
 
@@ -18,7 +18,7 @@ Define the plugin explicitly in your static configuration file (e.g., `traefik.y
 experimental:
   plugins:
     cow-txt-plugin:
-      moduleName: github.com/incognito124/cow-txt-plugin
+      moduleName: github.com/InCogNiTo124/cow-txt-plugin
       version: v0.1.0 # Or whichever version tag you are using
 ```
 

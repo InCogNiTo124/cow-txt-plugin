@@ -1,6 +1,6 @@
 displayName: "Cow Txt Interceptor"
 type: middleware
-import: github.com/incognito124/cow-txt-plugin
+import: github.com/InCogNiTo124/cow-txt-plugin
 summary: "Intercepts requests for /cow.txt and serves the canonical ASCII cow."
 testData:
   {}
