@@ -1,4 +1,4 @@
-package cowtxt
+package cow_txt_plugin
 
 import (
 	"context"
