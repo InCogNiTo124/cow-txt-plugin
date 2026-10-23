@@ -7,7 +7,7 @@ import (
 )
 
 // Config the plugin configuration.
-type Config struct {}
+type Config struct{}
 
 // CreateConfig creates the default plugin configuration.
 func CreateConfig() *Config {
@@ -16,8 +16,8 @@ func CreateConfig() *Config {
 
 // CowTxt plugin.
 type CowTxt struct {
-	next http.Handler
-	name string
+	next         http.Handler
+	name         string
 	responseBody []byte
 }
 
@@ -84,8 +84,8 @@ const cowPayload = `
 // New created a new CowTxt plugin.
 func New(_ context.Context, next http.Handler, _ *Config, name string) (http.Handler, error) {
 	return &CowTxt{
-		next: next,
-		name: name,
+		next:         next,
+		name:         name,
 		responseBody: []byte(cowPayload),
 	}, nil
 }
