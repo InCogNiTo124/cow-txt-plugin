@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GO_VERSION: 1.27
-      GOLANGCI_LINT_VERSION: latest
+      GOLANGCI_LINT_VERSION: v2.15.0
       YAEGI_VERSION: v0.16.1
       CGO_ENABLED: 0
     defaults:
@@ -42,9 +42,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-go-
 
-      # https://golangci-lint.run/usage/install#other-ci
+      # https://golangci-lint.run/docs/welcome/install/local/#binaries
+      # NOTE: install.sh from the `master` branch is stale (hash bug); use golangci-lint.run.
       - name: Install golangci-lint ${{ env.GOLANGCI_LINT_VERSION }}
-        run: curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin ${GOLANGCI_LINT_VERSION}
+        run: curl -sSfL https://golangci-lint.run/install.sh | sh -s -- -b "$(go env GOPATH)/bin" "${GOLANGCI_LINT_VERSION}"
 
       - name: Install Yaegi ${{ env.YAEGI_VERSION }}
         run: curl -sfL https://raw.githubusercontent.com/traefik/yaegi/master/install.sh | bash -s -- -b $(go env GOPATH)/bin ${YAEGI_VERSION}
